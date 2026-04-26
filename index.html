@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swift Support – Consultancy Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1e2a3a;
+      --red:  #d0021b;
+      --cream: #f5f7fa;
+      --mid:   #5a6a7a;
+      --white: #ffffff;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--white);
+      /* Task 2: Decreased padding to 8px top/bottom, kept 48px left/right */
+      padding: 8px 48px; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    header img {
+      /* Task 1: Increased logo size to 64px */
+      height: 64px; 
+      width: auto;
+    }
+
+    /* fallback text logo if SVG missing */
+    .logo-fallback {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+    }
+
+    header nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    header nav a:hover { border-color: var(--red); color: var(--red); }
+
+    /* ── BODY / HERO ── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 640px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.18;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--red);
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .contact-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--white);
+      color: var(--mid);
+      text-align: center;
+      padding: 30px 24px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    footer a { color: var(--red); text-decoration: none; font-weight: 500; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 560px) {
+      header { padding: 8px 24px; }
+      header img { height: 48px; } /* Slightly smaller for mobile screens */
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <img src="swiftsupport-logo.svg" alt="Swift Support" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+      <span class="logo-fallback" style="display:none;">Swift Support</span>
+      <nav>
+        <a href="mailto:accounts@swiftsupportsg.com">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero-inner">
+        <span class="eyebrow">Consultancy Services</span>
+        <h1>Practical Solutions,<br>Swift Results</h1>
+        <p class="tagline">
+          Swift Support Pte. Ltd. partners with businesses to navigate complexity,
+          streamline operations, and deliver measurable outcomes — with clarity and speed.
+        </p>
+        <a class="contact-btn" href="mailto:accounts@swiftsupportsg.com">Get in Touch</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="mailto:accounts@swiftsupportsg.com">accounts@swiftsupportsg.com</a>
+        &nbsp;·&nbsp;
+        Copyright &copy; 2026 Swift Support Pte. Ltd.
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
