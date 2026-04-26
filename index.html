@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Swift Support – Consultancy Services</title>
+  
+  <link rel="icon" type="image/svg+xml" href="ss-ico.svg">
+  
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,7 +36,6 @@
     /* ── HEADER ── */
     header {
       background: var(--white);
-      /* Task 2: Decreased padding to 8px top/bottom, kept 48px left/right */
       padding: 8px 48px; 
       display: flex;
       align-items: center;
@@ -42,12 +44,10 @@
     }
 
     header img {
-      /* Task 1: Increased logo size to 64px */
       height: 64px; 
       width: auto;
     }
 
-    /* fallback text logo if SVG missing */
     .logo-fallback {
       font-family: 'DM Serif Display', serif;
       font-size: 1.4rem;
@@ -140,7 +140,7 @@
 
     @media (max-width: 560px) {
       header { padding: 8px 24px; }
-      header img { height: 48px; } /* Slightly smaller for mobile screens */
+      header img { height: 48px; }
     }
   </style>
 </head>
