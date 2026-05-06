@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swift Support – Engineering Consultancy &amp; Staffing | Singapore</title>
-  <meta name="description" content="Swift Support Pte. Ltd. provides experienced engineering consultants and QA/QC professionals for LTA, MRT, and construction projects in Singapore. Secondment, planning, and consultancy services." />
+  <title>Swift Support – Engineering Staffing & Consultancy | Singapore</title>
+  <meta name="description" content="Swift Support Pte. Ltd. provides deployment-ready planning engineers and QA/QC professionals for LTA, MRT, and civil infrastructure projects in Singapore. Secondment and consultancy services for main contractors and PMC firms." />
   <link rel="icon" type="image/svg+xml" href="swiftsupport-logo.svg">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --navy:   #2D3142;
       --red:    #E71D36;
@@ -20,10 +18,8 @@
       --mid:    #6b7280;
       --border: rgba(45,49,66,0.10);
     }
-
     html { scroll-behavior: smooth; }
     body { font-family: 'Sora', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; }
-
     .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
     .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
     .btn { display: inline-block; padding: 13px 32px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; text-decoration: none; border-radius: 3px; transition: all 0.2s; }
@@ -51,103 +47,153 @@
 
     /* HERO */
     #home { padding: 96px 0 80px; background: var(--white); position: relative; overflow: hidden; }
-    #home::before { content: ''; position: absolute; top: -60px; right: -80px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(231,29,54,0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .hero-left h1 { font-family: 'Lora', serif; font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 600; line-height: 1.15; color: var(--navy); margin-bottom: 24px; }
+    #home::before { content: ''; position: absolute; top: -60px; right: -80px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(231,29,54,0.05) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+    .hero-left h1 { font-family: 'Lora', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 600; line-height: 1.15; color: var(--navy); margin-bottom: 24px; }
     .hero-left h1 em { font-style: italic; color: var(--red); }
-    .hero-left p { font-size: 1rem; font-weight: 300; color: var(--mid); line-height: 1.75; margin-bottom: 36px; max-width: 480px; }
+    .hero-left p { font-size: 1rem; font-weight: 300; color: var(--mid); line-height: 1.8; margin-bottom: 36px; max-width: 500px; }
     .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-    .hero-right { display: flex; flex-direction: column; gap: 16px; }
-    .stat-card { background: var(--off); border-left: 3px solid var(--red); padding: 20px 24px; border-radius: 4px; }
-    .stat-card .num { font-family: 'Lora', serif; font-size: 2rem; font-weight: 600; color: var(--navy); line-height: 1; margin-bottom: 4px; }
-    .stat-card .label { font-size: 0.8rem; font-weight: 400; color: var(--mid); }
+    .hero-right { display: flex; flex-direction: column; gap: 14px; }
+
+    /* Pill cards on hero */
+    .hero-pill {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 18px 20px;
+      background: var(--off);
+      border-left: 3px solid var(--red);
+      border-radius: 4px;
+    }
+    .hero-pill-icon { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(231,29,54,0.1); border-radius: 3px; }
+    .hero-pill-icon svg { width: 16px; height: 16px; fill: none; stroke: var(--red); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .hero-pill-text .pt { font-size: 0.88rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+    .hero-pill-text .ps { font-size: 0.78rem; color: var(--mid); line-height: 1.5; }
+
+    /* WHO WE WORK WITH banner */
+    .client-banner { background: var(--navy); padding: 28px 0; }
+    .client-banner-inner { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; justify-content: center; }
+    .client-banner-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); white-space: nowrap; }
+    .client-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.15); }
+    .client-type { font-size: 0.82rem; font-weight: 500; color: rgba(255,255,255,0.75); display: flex; align-items: center; gap: 8px; }
+    .client-dot { width: 5px; height: 5px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
 
     /* SECTIONS */
     section { padding: 80px 0; }
-    #about, #careers { background: var(--off); }
-    #services, #home { background: var(--white); }
+    #about { background: var(--off); }
+    #services { background: var(--white); }
+    #how { background: var(--off); }
+    #careers { background: var(--white); }
 
     /* ABOUT */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-    .about-text p { font-size: 0.98rem; color: var(--mid); line-height: 1.8; margin-bottom: 18px; }
+    .about-text h2 { font-family: 'Lora', serif; font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 600; line-height: 1.2; margin-bottom: 20px; }
+    .about-text p { font-size: 0.97rem; color: var(--mid); line-height: 1.85; margin-bottom: 18px; }
     .about-text p strong { color: var(--navy); font-weight: 600; }
-    .about-text h2 { font-family: 'Lora', serif; font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 600; line-height: 1.2; margin-bottom: 24px; }
-    .about-credentials { display: flex; flex-direction: column; gap: 16px; }
-    .cred-item { display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; background: var(--white); border-radius: 4px; border: 1px solid var(--border); }
-    .cred-icon { width: 36px; height: 36px; background: var(--red); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .cred-icon svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .cred-text .title { font-size: 0.88rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
-    .cred-text .sub { font-size: 0.8rem; color: var(--mid); }
-    .sectors-strip { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
-    .sector-pill { display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--white); border: 1px solid var(--border); border-radius: 32px; font-size: 0.82rem; font-weight: 500; color: var(--navy); }
-    .sector-dot { width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+    .about-text p:last-child { margin-bottom: 0; }
+
+    /* Value props grid */
+    .value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .value-card { padding: 20px; background: var(--white); border: 1px solid var(--border); border-radius: 4px; position: relative; overflow: hidden; }
+    .value-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--red); }
+    .value-card .vc-icon { width: 36px; height: 36px; background: rgba(231,29,54,0.08); border-radius: 3px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .value-card .vc-icon svg { width: 18px; height: 18px; fill: none; stroke: var(--red); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .value-card h4 { font-size: 0.88rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    .value-card p { font-size: 0.8rem; color: var(--mid); line-height: 1.6; }
+
+    /* Sectors */
+    .sectors-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+    .sector-pill { display: flex; align-items: center; gap: 7px; padding: 8px 16px; background: var(--white); border: 1px solid var(--border); border-radius: 32px; font-size: 0.8rem; font-weight: 500; color: var(--navy); }
+    .sector-dot { width: 5px; height: 5px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
 
     /* SERVICES */
-    .section-header { margin-bottom: 52px; }
+    .section-header { margin-bottom: 48px; }
     .section-header h2 { font-family: 'Lora', serif; font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 600; line-height: 1.2; color: var(--navy); margin-bottom: 14px; }
-    .section-header p { font-size: 0.98rem; font-weight: 300; color: var(--mid); max-width: 540px; line-height: 1.75; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-    .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 32px 28px; transition: box-shadow 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+    .section-header p { font-size: 0.97rem; font-weight: 300; color: var(--mid); max-width: 560px; line-height: 1.8; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .service-card { background: var(--off); border: 1px solid var(--border); border-radius: 4px; padding: 32px 28px; transition: box-shadow 0.2s, transform 0.2s; position: relative; overflow: hidden; }
     .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-card:hover { box-shadow: 0 8px 32px rgba(45,49,66,0.10); transform: translateY(-2px); }
-    .service-icon { width: 44px; height: 44px; background: rgba(231,29,54,0.08); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-    .service-icon svg { width: 22px; height: 22px; fill: none; stroke: var(--red); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .service-card:hover { box-shadow: 0 8px 32px rgba(45,49,66,0.09); transform: translateY(-2px); }
+    .svc-who { display: inline-flex; align-items: center; gap: 6px; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); background: rgba(231,29,54,0.08); padding: 3px 10px; border-radius: 2px; margin-bottom: 16px; }
+    .service-icon { width: 42px; height: 42px; background: var(--white); border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .service-icon svg { width: 20px; height: 20px; fill: none; stroke: var(--red); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .service-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
-    .service-card p { font-size: 0.88rem; color: var(--mid); line-height: 1.7; margin-bottom: 18px; }
+    .service-card p { font-size: 0.87rem; color: var(--mid); line-height: 1.75; margin-bottom: 18px; }
     .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .service-tag { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.04em; padding: 3px 10px; background: var(--off); color: var(--navy); border-radius: 2px; border: 1px solid var(--border); }
+    .service-tag { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.04em; padding: 3px 9px; background: var(--white); color: var(--navy); border-radius: 2px; border: 1px solid var(--border); }
+
+    /* HOW IT WORKS */
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+    .steps-grid::before { content: ''; position: absolute; top: 28px; left: calc(12.5%); right: calc(12.5%); height: 2px; background: var(--border); z-index: 0; }
+    .step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+    .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--white); border: 2px solid var(--red); color: var(--red); font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 600; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    .step h4 { font-size: 0.88rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .step p { font-size: 0.8rem; color: var(--mid); line-height: 1.6; }
 
     /* CAREERS */
     .careers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
     .careers-text h2 { font-family: 'Lora', serif; font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 600; line-height: 1.2; margin-bottom: 20px; }
-    .careers-text p { font-size: 0.98rem; color: var(--mid); line-height: 1.8; margin-bottom: 18px; }
-    .roles-list { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
-    .role-item { display: flex; align-items: center; gap: 12px; font-size: 0.88rem; color: var(--navy); font-weight: 500; }
-    .role-item::before { content: ''; width: 20px; height: 2px; background: var(--red); flex-shrink: 0; }
-    .careers-cta { background: var(--navy); border-radius: 4px; padding: 36px 32px; color: var(--white); }
-    .careers-cta h3 { font-family: 'Lora', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 12px; }
-    .careers-cta p { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 24px; }
+    .careers-text p { font-size: 0.97rem; color: var(--mid); line-height: 1.8; margin-bottom: 18px; }
+    .roles-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .role-item { display: flex; align-items: center; gap: 12px; font-size: 0.87rem; color: var(--navy); font-weight: 500; }
+    .role-item::before { content: ''; width: 18px; height: 2px; background: var(--red); flex-shrink: 0; }
+    .careers-cta { background: var(--navy); border-radius: 4px; padding: 36px 32px; }
+    .careers-cta h3 { font-family: 'Lora', serif; font-size: 1.4rem; font-weight: 600; color: #fff; margin-bottom: 12px; }
+    .careers-cta p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 24px; }
+    .careers-cta .note { font-size: 0.76rem; color: rgba(255,255,255,0.3); margin-top: 14px; margin-bottom: 0; }
 
     /* CONTACT */
     #contact { background: var(--navy); padding: 80px 0; }
-    #contact .tag { color: rgba(231,29,54,0.9); }
-    #contact h2 { font-family: 'Lora', serif; font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 600; color: var(--white); margin-bottom: 14px; }
-    #contact .sub { font-size: 0.98rem; color: rgba(255,255,255,0.55); max-width: 480px; line-height: 1.75; margin-bottom: 48px; }
+    #contact .tag { color: rgba(231,29,54,0.85); }
+    #contact h2 { font-family: 'Lora', serif; font-size: clamp(1.8rem,3vw,2.4rem); font-weight: 600; color: #fff; margin-bottom: 14px; }
+    #contact .sub { font-size: 0.97rem; color: rgba(255,255,255,0.5); max-width: 500px; line-height: 1.8; margin-bottom: 52px; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
     .contact-detail { display: flex; flex-direction: column; gap: 24px; }
     .contact-item { display: flex; gap: 16px; align-items: flex-start; }
-    .contact-item-icon { width: 40px; height: 40px; background: rgba(231,29,54,0.15); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .contact-item-icon svg { width: 18px; height: 18px; fill: none; stroke: var(--red); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .contact-item-text .label { font-size: 0.75rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
-    .contact-item-text a, .contact-item-text span { font-size: 0.95rem; color: var(--white); text-decoration: none; }
-    .contact-item-text a:hover { color: var(--red); }
+    .ci-icon { width: 40px; height: 40px; background: rgba(231,29,54,0.15); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ci-icon svg { width: 18px; height: 18px; fill: none; stroke: var(--red); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .ci-text .label { font-size: 0.72rem; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
+    .ci-text a, .ci-text span { font-size: 0.93rem; color: #fff; text-decoration: none; }
+    .ci-text a:hover { color: var(--red); }
     .contact-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 32px 28px; }
-    .contact-box p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 24px; }
+    .contact-box p { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.75; margin-bottom: 24px; }
     .contact-box .btn-red { width: 100%; text-align: center; display: block; }
+    .contact-box-sub { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .contact-box-sub p { font-size: 0.78rem; color: rgba(255,255,255,0.3); margin-bottom: 6px; }
+    .contact-box-sub a { font-size: 0.84rem; color: var(--red); text-decoration: none; font-weight: 500; }
 
     /* FOOTER */
-    footer { background: #1e2330; padding: 28px 32px; text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
-    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer { background: #1e2330; padding: 28px 32px; text-align: center; font-size: 0.77rem; color: rgba(255,255,255,0.3); }
+    footer a { color: rgba(255,255,255,0.45); text-decoration: none; }
     footer a:hover { color: var(--red); }
 
     /* ANIMATIONS */
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    .fade-up { animation: fadeUp 0.6s ease forwards; }
-    .delay-1 { animation-delay: 0.1s; opacity: 0; }
-    .delay-2 { animation-delay: 0.2s; opacity: 0; }
-    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fadeUp 0.55s ease forwards; }
+    .d1 { animation-delay: 0.1s; opacity: 0; }
+    .d2 { animation-delay: 0.2s; opacity: 0; }
+    .d3 { animation-delay: 0.3s; opacity: 0; }
 
     /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .steps-grid::before { display: none; }
+    }
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
-      .hero-grid, .about-grid, .careers-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-grid, .about-grid, .services-grid, .careers-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .value-grid { grid-template-columns: 1fr; }
       .hero-right { flex-direction: row; flex-wrap: wrap; }
-      .stat-card { flex: 1 1 140px; }
-      section { padding: 60px 0; }
+      .hero-pill { flex: 1 1 260px; }
+      section { padding: 56px 0; }
       .container { padding: 0 20px; }
       .nav-inner { padding: 12px 20px; }
+      .steps-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+    @media (max-width: 480px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .client-banner-divider { display: none; }
     }
   </style>
 </head>
@@ -162,6 +208,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#how">How It Works</a></li>
       <li><a href="#careers">Careers</a></li>
     </ul>
     <a href="mailto:accounts@swiftsupportsg.com" class="nav-cta">Contact Us</a>
@@ -172,6 +219,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="toggleMenu()">About</a>
     <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#how" onclick="toggleMenu()">How It Works</a>
     <a href="#careers" onclick="toggleMenu()">Careers</a>
     <a href="mailto:accounts@swiftsupportsg.com">Contact Us</a>
   </div>
@@ -182,31 +230,61 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-        <span class="tag fade-up">Engineering Consultancy · Singapore</span>
-        <h1 class="fade-up delay-1">Experienced Engineers,<br><em>On Demand.</em></h1>
-        <p class="fade-up delay-2">Swift Support deploys specialist engineering professionals — planners, QA/QC engineers, and project coordinators — to infrastructure and construction projects across Singapore.</p>
-        <div class="hero-btns fade-up delay-3">
+        <span class="tag fade-up">Engineering Staffing &amp; Consultancy · Singapore</span>
+        <h1 class="fade-up d1">The right engineer,<br>on your project — <em>fast.</em></h1>
+        <p class="fade-up d2">Swift Support deploys experienced planning engineers and QA/QC professionals to LTA infrastructure and MRT projects across Singapore. No lengthy recruitment cycles. No permanent headcount risk. Just the right person, ready to deliver.</p>
+        <div class="hero-btns fade-up d3">
           <a href="#services" class="btn btn-red">Our Services</a>
-          <a href="mailto:accounts@swiftsupportsg.com" class="btn btn-outline">Get in Touch</a>
+          <a href="mailto:accounts@swiftsupportsg.com" class="btn btn-outline">Talk to Us</a>
         </div>
       </div>
-      <div class="hero-right fade-up delay-2">
-        <div class="stat-card">
-          <div class="num">8+</div>
-          <div class="label">Years of LTA project experience across our team</div>
+      <div class="hero-right fade-up d2">
+        <div class="hero-pill">
+          <div class="hero-pill-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="hero-pill-text">
+            <div class="pt">Staff Augmentation</div>
+            <div class="ps">Deploy engineers directly to your project site under a flexible secondment arrangement</div>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="num">MRT</div>
-          <div class="label">Metro rail, tunnels, viaducts &amp; depot extensions</div>
+        <div class="hero-pill">
+          <div class="hero-pill-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <div class="hero-pill-text">
+            <div class="pt">Planning &amp; Scheduling</div>
+            <div class="ps">Primavera P6 baseline programmes, S-curves, progress reports, LTA submissions</div>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="num">P6</div>
-          <div class="label">Primavera P6 planning &amp; programme management</div>
+        <div class="hero-pill">
+          <div class="hero-pill-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <div class="hero-pill-text">
+            <div class="pt">QA/QC Management</div>
+            <div class="ps">NCR, RFI, ITP, method statements — full documentation and site inspection support</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- WHO WE WORK WITH -->
+<div class="client-banner">
+  <div class="container">
+    <div class="client-banner-inner">
+      <span class="client-banner-label">We work with</span>
+      <div class="client-divider"></div>
+      <div class="client-type"><span class="client-dot"></span>Main Contractors</div>
+      <div class="client-type"><span class="client-dot"></span>Joint Venture Partners</div>
+      <div class="client-type"><span class="client-dot"></span>PMC &amp; Supervision Consultants</div>
+      <div class="client-type"><span class="client-dot"></span>Sub-Contractors</div>
+      <div class="client-type"><span class="client-dot"></span>LTA Project Teams</div>
+    </div>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
@@ -215,71 +293,56 @@
       <div class="about-text">
         <div class="red-rule"></div>
         <span class="tag">About Us</span>
-        <h2>Built from the ground up — on real project experience</h2>
-        <p>Swift Support Pte. Ltd. is a Singapore-registered management consultancy specialising in engineering staffing and consultancy for the construction and infrastructure sector.</p>
-        <p>Our team brings <strong>hands-on delivery experience</strong> from some of Singapore's most demanding infrastructure programmes — including LTA Mass Rapid Transit contracts, circle and north-south line extensions, underground metro works, and high-rise private developments.</p>
-        <p>We understand what main contractors and sub-contractors need on the ground — because we have been there. We provide <strong>right-fit professionals, fast</strong>, without the overhead of large consultancy firms.</p>
-        <p style="margin-bottom:0;"><strong>UEN-registered · LOC holder · ACRA-compliant</strong></p>
+        <h2>A lean firm built on deep infrastructure knowledge</h2>
+        <p>Swift Support Pte. Ltd. is a Singapore-registered management consultancy providing <strong>engineering staffing and consultancy services</strong> to the construction and infrastructure sector.</p>
+        <p>We were founded by practitioners — engineers who have worked directly on LTA MRT contracts, trackwork, tunnel and civil infrastructure projects in Singapore. We understand what project teams need on the ground, because <strong>we have done the work ourselves.</strong></p>
+        <p>That means when we recommend a resource or take on a scope, you are not getting a generalist recruiter or a large firm with layers of management. You are getting focused, <strong>project-ready support</strong> from people who know the LTA environment, the documentation requirements, and the pace of MRT delivery.</p>
+        <p style="margin-bottom:0;"><strong>UEN-registered &nbsp;·&nbsp; ACRA-compliant</strong></p>
       </div>
-      <div class="about-credentials">
-        <div class="cred-item">
-          <div class="cred-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <div>
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="vc-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4>Fast Deployment</h4>
+            <p>We maintain a bench of vetted professionals. When you need someone, we move quickly — not in weeks.</p>
           </div>
-          <div class="cred-text">
-            <div class="title">MSc Project Management</div>
-            <div class="sub">Sheffield Hallam University, UK</div>
+          <div class="value-card">
+            <div class="vc-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h4>LTA-Ready</h4>
+            <p>Our professionals know LTA documentation, submission standards, and site inspection protocols.</p>
           </div>
-        </div>
-        <div class="cred-item">
-          <div class="cred-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div class="value-card">
+            <div class="vc-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>Flexible Terms</h4>
+            <p>Contract, short-term surge, or longer secondment — structured around your project timeline.</p>
           </div>
-          <div class="cred-text">
-            <div class="title">LTA / MRT Project Track Record</div>
-            <div class="sub">Circle Line, NSL, TEL, Tuas &amp; depot extensions</div>
-          </div>
-        </div>
-        <div class="cred-item">
-          <div class="cred-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="cred-text">
-            <div class="title">Primavera P6 Programme Planning</div>
-            <div class="sub">Baseline, progress tracking, S-curves, look-ahead</div>
-          </div>
-        </div>
-        <div class="cred-item">
-          <div class="cred-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-          </div>
-          <div class="cred-text">
-            <div class="title">QA/QC Management</div>
-            <div class="sub">NCR, RFI, ITP, method statements, LTA submissions</div>
+          <div class="value-card">
+            <div class="vc-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h4>Low Overhead</h4>
+            <p>No large firm markup. You get experienced professionals at a rate that makes commercial sense.</p>
           </div>
         </div>
-        <div class="cred-item">
-          <div class="cred-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <div class="cred-text">
-            <div class="title">Project Experience</div>
-            <div class="sub">HNE Consultants · Alstom · Gates JV · MRES · Lodha</div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div style="margin-top:56px;">
-      <span class="tag">Sectors We Serve</span>
-      <div class="sectors-strip">
-        <div class="sector-pill"><span class="sector-dot"></span>MRT &amp; Metro Rail</div>
-        <div class="sector-pill"><span class="sector-dot"></span>Tunnels &amp; Underground</div>
-        <div class="sector-pill"><span class="sector-dot"></span>Viaduct &amp; Elevated Works</div>
-        <div class="sector-pill"><span class="sector-dot"></span>Trackwork &amp; Third Rail</div>
-        <div class="sector-pill"><span class="sector-dot"></span>Airport Infrastructure</div>
-        <div class="sector-pill"><span class="sector-dot"></span>High-Rise Buildings</div>
-        <div class="sector-pill"><span class="sector-dot"></span>Civil &amp; Structural Works</div>
+        <div style="margin-top:36px;">
+          <span class="tag">Sectors We Cover</span>
+          <div class="sectors-strip">
+            <div class="sector-pill"><span class="sector-dot"></span>MRT &amp; Metro Rail</div>
+            <div class="sector-pill"><span class="sector-dot"></span>Tunnels &amp; Underground</div>
+            <div class="sector-pill"><span class="sector-dot"></span>Trackwork &amp; Third Rail</div>
+            <div class="sector-pill"><span class="sector-dot"></span>Viaduct &amp; Elevated</div>
+            <div class="sector-pill"><span class="sector-dot"></span>Depot Works</div>
+            <div class="sector-pill"><span class="sector-dot"></span>Civil &amp; Structural</div>
+            <div class="sector-pill"><span class="sector-dot"></span>High-Rise Buildings</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -291,64 +354,111 @@
     <div class="section-header">
       <div class="red-rule"></div>
       <span class="tag">What We Do</span>
-      <h2>Two ways we support your project</h2>
-      <p>Whether you need an experienced engineer on-site tomorrow or strategic planning consultancy, we deliver with speed and precision.</p>
+      <h2>Services built around how LTA projects actually work</h2>
+      <p>Whether you need a planner in P6 on Monday or a QA/QC manager for a full contract phase, we structure our services to fit your delivery model — not ours.</p>
     </div>
     <div class="services-grid">
+
       <div class="service-card">
+        <div class="svc-who">For main contractors &amp; JVs</div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <h3>Staff Augmentation &amp; Secondment</h3>
-        <p>Deploy qualified, LTA-experienced engineers directly to your site or office. We handle the placement — you get the expertise, on your terms.</p>
+        <p>We place experienced engineers directly onto your project — on Swift Support's payroll, under your site direction. No lengthy hiring process, no permanent commitment. Ideal for surge periods, contract packages, or project ramp-ups.</p>
         <div class="service-tags">
           <span class="service-tag">Planning Engineers</span>
           <span class="service-tag">QA/QC Engineers</span>
           <span class="service-tag">Project Coordinators</span>
           <span class="service-tag">Site Engineers</span>
+          <span class="service-tag">RE / ARE</span>
           <span class="service-tag">Contract &amp; Short-term</span>
         </div>
       </div>
+
       <div class="service-card">
+        <div class="svc-who">For PMC &amp; consultant firms</div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
         <h3>Programme Planning &amp; Scheduling</h3>
-        <p>End-to-end project programme support — from baseline development to weekly progress updates, S-curves, look-ahead reports, and LTA submissions.</p>
+        <p>Full planning support for LTA contracts — from developing the baseline programme with client and LTA comments, through to weekly updates, monthly reporting, and look-ahead submissions. Primavera P6 as standard.</p>
         <div class="service-tags">
           <span class="service-tag">Primavera P6</span>
           <span class="service-tag">Baseline Programme</span>
           <span class="service-tag">S-Curve &amp; Progress</span>
-          <span class="service-tag">Monthly Reports</span>
+          <span class="service-tag">3-Month Look-Ahead</span>
           <span class="service-tag">LTA Submissions</span>
+          <span class="service-tag">Resource Histograms</span>
         </div>
       </div>
+
       <div class="service-card">
+        <div class="svc-who">For main contractors &amp; sub-cons</div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
         </div>
         <h3>QA/QC Management</h3>
-        <p>Full quality assurance and control for civil, trackwork, and structural projects — documentation, inspections, NCR management, and third-party testing coordination.</p>
+        <p>End-to-end quality management for civil, trackwork, and structural scopes. We handle the full documentation chain — method statements, ITPs, RFIs, NCR management, and third-party testing coordination — to LTA standards.</p>
         <div class="service-tags">
           <span class="service-tag">NCR &amp; RFI</span>
           <span class="service-tag">Method Statements</span>
-          <span class="service-tag">ITP / QAP</span>
+          <span class="service-tag">ITP &amp; QAP</span>
           <span class="service-tag">Site Inspections</span>
-          <span class="service-tag">Snag Lists</span>
+          <span class="service-tag">Snag &amp; Defects</span>
+          <span class="service-tag">Third-Party Testing</span>
         </div>
       </div>
+
       <div class="service-card">
+        <div class="svc-who">For all project types</div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
         </div>
         <h3>Project Management Consultancy</h3>
-        <p>Advisory and coordination support for complex multi-discipline projects — bridging client, contractor, and sub-contractor requirements with clarity.</p>
+        <p>Advisory and coordination support where you need an experienced hand to bridge contractor, sub-contractor, and client requirements. Meetings, MOM, reporting, sub-con management, and handover coordination.</p>
         <div class="service-tags">
           <span class="service-tag">Project Coordination</span>
           <span class="service-tag">MOM &amp; Reporting</span>
-          <span class="service-tag">Sub-con Management</span>
+          <span class="service-tag">Sub-con Interface</span>
           <span class="service-tag">Handover Support</span>
+          <span class="service-tag">Client Liaison</span>
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-header" style="text-align:center; margin-bottom:56px;">
+      <div class="red-rule" style="margin:0 auto 20px;"></div>
+      <span class="tag">How It Works</span>
+      <h2>Simple. Fast. No overhead.</h2>
+      <p style="margin: 0 auto; text-align:center;">We keep the process lean so your project gets moving without delay.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Tell us what you need</h4>
+        <p>Share your project scope, timeline, and the type of engineer or support required. One email is enough to start.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>We match the right profile</h4>
+        <p>We identify the right person from our network — experienced, LTA-familiar, and available on your timeline.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>We agree on terms</h4>
+        <p>Straightforward service agreement. No complicated procurement. Flexible duration to fit your contract phase.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Your engineer is on site</h4>
+        <p>The resource is deployed under Swift Support, working under your direction. You focus on delivery.</p>
       </div>
     </div>
   </div>
@@ -361,23 +471,23 @@
       <div class="careers-text">
         <div class="red-rule"></div>
         <span class="tag">Join Our Network</span>
-        <h2>We're building a talent pool of LTA-ready engineers</h2>
-        <p>Swift Support works with experienced engineers and coordinators who want to be matched with the right infrastructure project in Singapore. If you have MRT, civil, or construction project experience, we want to hear from you.</p>
-        <p>We regularly place professionals for roles across our client projects:</p>
+        <h2>LTA project experience? We want to hear from you.</h2>
+        <p>We are building a bench of experienced infrastructure engineers who are open to contract, secondment, or project-based roles in Singapore. If you have hands-on MRT, civil, or trackwork experience, register your interest with us.</p>
+        <p>We place professionals across these roles on active LTA projects:</p>
         <div class="roles-list">
           <div class="role-item">Planning Engineer (Primavera P6)</div>
           <div class="role-item">QA/QC Engineer — Civil &amp; Trackwork</div>
-          <div class="role-item">Project Coordinator</div>
+          <div class="role-item">Project Coordinator / RE</div>
           <div class="role-item">Site Engineer — Structural / MEP</div>
           <div class="role-item">BIM Coordinator</div>
           <div class="role-item">Document Controller</div>
         </div>
       </div>
       <div class="careers-cta">
-        <h3>Send Us Your CV</h3>
-        <p>We review all applications and reach out when a suitable project match is available. Contract, short-term, and full secondment roles available.</p>
-        <a href="mailto:accounts@swiftsupportsg.com?subject=Job Application – Swift Support" class="btn btn-red">Email Your CV</a>
-        <p style="margin-top:16px;margin-bottom:0;font-size:0.78rem;color:rgba(255,255,255,0.35);">accounts@swiftsupportsg.com</p>
+        <h3>Register Your Interest</h3>
+        <p>Send us your CV and a brief note on your experience. We will reach out when a project match arises — contract, short-term, or ongoing secondment roles available.</p>
+        <a href="mailto:accounts@swiftsupportsg.com?subject=CV Submission – Swift Support" class="btn btn-red">Send Your CV</a>
+        <p class="note">accounts@swiftsupportsg.com</p>
       </div>
     </div>
   </div>
@@ -387,44 +497,44 @@
 <section id="contact">
   <div class="container">
     <span class="tag">Get In Touch</span>
-    <h2>Let's discuss your project needs</h2>
-    <p class="sub">Whether you're a main contractor looking for staffing support, or a professional looking for your next project — reach out and we'll respond promptly.</p>
+    <h2>Let's talk about your project</h2>
+    <p class="sub">Whether you need a planning engineer next week or want to discuss a longer staffing arrangement — drop us a line and we will respond within one business day.</p>
     <div class="contact-grid">
       <div class="contact-detail">
         <div class="contact-item">
-          <div class="contact-item-icon">
+          <div class="ci-icon">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
-          <div class="contact-item-text">
+          <div class="ci-text">
             <div class="label">Email</div>
             <a href="mailto:accounts@swiftsupportsg.com">accounts@swiftsupportsg.com</a>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon">
+          <div class="ci-icon">
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <div class="contact-item-text">
+          <div class="ci-text">
             <div class="label">Location</div>
-            <span>Singapore</span>
+            <span>Singapore (UEN-registered)</span>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon">
+          <div class="ci-icon">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
-          <div class="contact-item-text">
+          <div class="ci-text">
             <div class="label">Primary Activity</div>
             <span>Management Consultancy &amp; Engineering Services (70201)</span>
           </div>
         </div>
       </div>
       <div class="contact-box">
-        <p>For project enquiries, staffing requests, or partnership discussions, email us directly. We typically respond within one business day.</p>
-        <a href="mailto:accounts@swiftsupportsg.com?subject=Project Enquiry" class="btn btn-red">Send an Enquiry</a>
-        <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);">
-          <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-bottom:8px;">Looking to join our talent network?</p>
-          <a href="mailto:accounts@swiftsupportsg.com?subject=CV Submission" style="font-size:0.85rem;color:var(--red);text-decoration:none;font-weight:500;">Submit your CV →</a>
+        <p>For project staffing enquiries, sub-consultant discussions, or to explore a partnership — reach out directly. We keep it simple and respond fast.</p>
+        <a href="mailto:accounts@swiftsupportsg.com?subject=Project Staffing Enquiry" class="btn btn-red">Send an Enquiry</a>
+        <div class="contact-box-sub">
+          <p>Looking to join our engineering network?</p>
+          <a href="mailto:accounts@swiftsupportsg.com?subject=CV Submission">Submit your CV →</a>
         </div>
       </div>
     </div>
@@ -448,6 +558,5 @@
     }
   });
 </script>
-
 </body>
 </html>
